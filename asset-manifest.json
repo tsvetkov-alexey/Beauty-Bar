@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Beauty-Bar/static/css/main.b69dddda.css",
-    "main.js": "/Beauty-Bar/static/js/main.7cec5801.js",
+    "main.js": "/Beauty-Bar/static/js/main.ee943dbd.js",
     "index.html": "/Beauty-Bar/index.html",
     "main.b69dddda.css.map": "/Beauty-Bar/static/css/main.b69dddda.css.map",
-    "main.7cec5801.js.map": "/Beauty-Bar/static/js/main.7cec5801.js.map"
+    "main.ee943dbd.js.map": "/Beauty-Bar/static/js/main.ee943dbd.js.map"
   },
   "entrypoints": [
     "static/css/main.b69dddda.css",
-    "static/js/main.7cec5801.js"
+    "static/js/main.ee943dbd.js"
   ]
 }
