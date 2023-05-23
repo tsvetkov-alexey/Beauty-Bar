@@ -52,17 +52,17 @@ const Header = () => {
                 </ul>
                 <div className="search">
                     <input type="text" placeholder="Я хочу купить..." />
-                    <img src="../assets/search.png" alt="search" />
+                    <img src="assets/search.png" alt="search" />
                 </div>
                 <ul className="icons">
                     <li className="profile">
-                        <img src="../assets/profile.png" alt="profile" />
+                        <img src="assets/profile.png" alt="profile" />
                     </li>
                     <li className="liked">
-                        <img src="../assets/liked.png" alt="profile" />
+                        <img src="assets/liked.png" alt="profile" />
                     </li>
                     <li className="cart">
-                        <img src="../assets/cart.png" alt="profile" />
+                        <img src="assets/cart.png" alt="profile" />
                     </li>
                 </ul>
             </div>
@@ -71,7 +71,7 @@ const Header = () => {
                     <ul>
                         <li>
                             <img
-                                src="../assets/menu.png"
+                                src="assets/menu.png"
                                 alt="menu"
                                 className="header-3-menu"
                                 onClick={toggleVisibility}
@@ -79,10 +79,10 @@ const Header = () => {
                         </li>
                         <div className="header-3-inside-icons">
                             <li className="liked">
-                                <img src="../assets/liked.png" alt="profile" />
+                                <img src="assets/liked.png" alt="profile" />
                             </li>
                             <li className="cart">
-                                <img src="../assets/cart.png" alt="profile" />
+                                <img src="assets/cart.png" alt="profile" />
                             </li>
                         </div>
                         <li className="header-3-el">Католог</li>

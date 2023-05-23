@@ -20,7 +20,7 @@ const Introduction = () => {
                 </Link>
             </div>
             <div className="third-column">
-                <img src="../assets/fst_scr.jpg" alt="cosmetics" />
+                <img src="assets/fst_scr.jpg" alt="cosmetics" />
             </div>
         </div>
     );

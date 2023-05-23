@@ -63,11 +63,11 @@ const MoreInfo = () => {
                         </div>
                     </div>
                     <span className="cosmetics-stars">
-                        <img src="../assets/Star-1.png" alt="star" />{' '}
-                        <img src="../assets/Star-1.png" alt="star" />{' '}
-                        <img src="../assets/Star-1.png" alt="star" />{' '}
-                        <img src="../assets/Star-1.png" alt="star" />{' '}
-                        <img src="../assets/Star-1.png" alt="star" />
+                        <img src="assets/Star-1.png" alt="star" />{' '}
+                        <img src="assets/Star-1.png" alt="star" />{' '}
+                        <img src="assets/Star-1.png" alt="star" />{' '}
+                        <img src="assets/Star-1.png" alt="star" />{' '}
+                        <img src="assets/Star-1.png" alt="star" />
                         {cosmetics.stars}
                     </span>
                     <h2 className="review">Отзывы (0)</h2>

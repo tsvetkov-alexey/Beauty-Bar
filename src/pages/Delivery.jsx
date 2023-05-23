@@ -21,7 +21,7 @@ const Delivery = () => {
                         трек-номер для отслеживания отправления.
                     </p>
                 </div>
-                <img src="../assets/delivery-1.jpg" alt="returnBack" />
+                <img src="assets/delivery-1.jpg" alt="returnBack" />
             </div>
             <div className="return-back">
                 <h2>Возврат</h2>
@@ -29,7 +29,7 @@ const Delivery = () => {
                     Если Вы получили поврежденный или несоответствующий заказу товар — сообщите нам!
                     Мы оперативно исправим ситуацию!
                 </p>
-                <img src="../assets/delivery-2.png" alt="returnBack" />
+                <img src="assets/delivery-2.png" alt="returnBack" />
             </div>
             <Footer />
         </>

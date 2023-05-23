@@ -7,7 +7,7 @@ const Blog = () => {
             <h2>Читай в блоге</h2>
             <div className="read-info">
                 <div className="image">
-                    <img src="../assets/spf.jpg" alt="SPF" />
+                    <img src="assets/spf.jpg" alt="SPF" />
                 </div>
                 <div className="text">
                     <h3>Защита от солнца:</h3>

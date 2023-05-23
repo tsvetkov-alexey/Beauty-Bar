@@ -12,7 +12,7 @@ const NotReady = () => {
             <div className="notReady">
                 <h4>Упс!</h4>
                 <p>Похоже данный раздел находится еще в разработке</p>
-                <img src="../assets/broken-heart.png" alt="brokenHeart" />
+                <img src="assets/broken-heart.png" alt="brokenHeart" />
                 <br></br>
                 <button>
                     <Link to="/">

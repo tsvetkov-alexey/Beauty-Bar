@@ -10,11 +10,11 @@ const Contacts = () => {
             <div className="contacts-block">
                 <div className="contacts-block-info">
                     <div className="email">
-                        <img src="../assets/mail-1.png" alt="mail" />
+                        <img src="assets/mail-1.png" alt="mail" />
                         <p>beautybar@mail.ru</p>
                     </div>
                     <div className="phone">
-                        <img src="../assets/phone-1.png" alt="phone" />
+                        <img src="assets/phone-1.png" alt="phone" />
                         <p>+7 (913) 113 52 64</p>
                     </div>
                 </div>
