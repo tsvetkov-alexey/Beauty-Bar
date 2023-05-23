@@ -56,13 +56,13 @@ const Header = () => {
                 </div>
                 <ul className="icons">
                     <li className="profile">
-                        <img src="assets/profile.png" alt="profile" />
+                        <img src="../assets/profile.png" alt="profile" />
                     </li>
                     <li className="liked">
-                        <img src="assets/liked.png" alt="profile" />
+                        <img src="../assets/liked.png" alt="profile" />
                     </li>
                     <li className="cart">
-                        <img src="assets/cart.png" alt="profile" />
+                        <img src="../assets/cart.png" alt="profile" />
                     </li>
                 </ul>
             </div>
