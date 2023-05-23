@@ -71,7 +71,7 @@ const Header = () => {
                     <ul>
                         <li>
                             <img
-                                src="assets/menu.png"
+                                src="../assets/menu.png"
                                 alt="menu"
                                 className="header-3-menu"
                                 onClick={toggleVisibility}
