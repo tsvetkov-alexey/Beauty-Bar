@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Beauty-Bar/static/css/main.b69dddda.css",
+    "main.js": "/Beauty-Bar/static/js/main.be7d8436.js",
+    "index.html": "/Beauty-Bar/index.html",
+    "main.b69dddda.css.map": "/Beauty-Bar/static/css/main.b69dddda.css.map",
+    "main.be7d8436.js.map": "/Beauty-Bar/static/js/main.be7d8436.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b69dddda.css",
+    "static/js/main.be7d8436.js"
+  ]
+}
