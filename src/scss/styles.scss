@@ -200,12 +200,26 @@ header {
         justify-content: space-between;
 
         .card {
-            width: 350px;
             border-radius: 20px;
             border: 1px solid silver;
             position: relative;
             padding: 30px;
             background: #fff;
+
+            .like-liked {
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+
+                .img-like {
+                    max-width: 30px;
+                }
+
+                .img-liked {
+                    max-width: 34px;
+                }
+            }
 
             a {
                 text-decoration: none;
@@ -333,6 +347,91 @@ footer {
     }
 }
 
+.liked-page {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.liked-page {
+    .cards {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .card {
+            width: 70%;
+            border-radius: 20px;
+            border: 1px solid silver;
+            position: relative;
+            padding: 30px;
+            background: #fff;
+            margin: 0 auto;
+
+            .like-liked {
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+
+                .img-like {
+                    max-width: 30px;
+                }
+
+                .img-liked {
+                    max-width: 34px;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+            .cream {
+                width: 260px;
+                height: 260px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .like {
+                max-width: 30px;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                cursor: pointer;
+            }
+
+            span {
+                color: #877f7f;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            button {
+                width: 100%;
+                height: 45px;
+                border: 0;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                padding: 12px;
+
+                img {
+                    max-width: 25px;
+                }
+
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 420px) {
     .content {
         flex-direction: column-reverse;
@@ -372,15 +471,18 @@ footer {
     }
 
     .new-items {
+        padding-left: 0px !important;
         .new-sign {
+            padding-left: 20px;
             h2 {
                 padding-top: 0px;
             }
         }
         .cards {
-            overflow-x: auto;
+            flex-direction: column;
             .card {
-                margin-right: 10px;
+                margin: 15px auto;
+                width: 75%;
             }
         }
     }

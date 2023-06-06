@@ -127,12 +127,14 @@
                 div {
                     padding-bottom: 10px;
                     width: 100%;
-                    display: flex;
                     justify-content: space-between;
                     padding-top: 20px;
 
                     .plus {
                         font-size: 20px;
+                    }
+                    .flex {
+                        display: flex;
                     }
                 }
                 .ingridients {

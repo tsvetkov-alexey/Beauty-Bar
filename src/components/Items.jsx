@@ -1,14 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
-const Items = ({ id, title, fullTitle, price, imageUrl, likeUrl, cartUrl }) => {
+const Items = ({ id, title, fullTitle, price, imageUrl, cartUrl }) => {
+    const [isLiked, setIsLiked] = useState(false);
+    // const isMounted = useRef(false);
+
+    const toggle = () => {
+        setIsLiked(!isLiked);
+        const json = JSON.stringify({ id, title, fullTitle, price, imageUrl, cartUrl });
+        localStorage.setItem('liked', json);
+    };
+
     return (
         <div className="card">
             <Link to={`/items/${id}`}>
                 <img src={imageUrl} alt="cream" className="cream" />
             </Link>
 
-            <img src={likeUrl} alt="like" className="like" />
+            <div className="like-liked" onClick={toggle}>
+                {isLiked ? (
+                    <img src="../assets/liked.png" alt="liked" className="img-liked" />
+                ) : (
+                    <img src="../assets/like.png" alt="like" className="img-like" />
+                )}
+            </div>
             <br />
             <span>{title}</span>
             <br />

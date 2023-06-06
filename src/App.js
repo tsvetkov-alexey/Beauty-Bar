@@ -5,20 +5,27 @@ import NotReady from './pages/NotReady';
 import AboutUs from './pages/AboutUs';
 import Delivery from './pages/Delivery';
 import Contacts from './pages/Contacts';
+import { createContext, useState } from 'react';
+import Liked from './components/Liked';
 
-function App() {
+export const SearchRequest = createContext('');
+
+const App = () => {
+    const [searchValue, setSearchValue] = useState('');
+
     return (
-        <div>
+        <SearchRequest.Provider value={{ searchValue, setSearchValue }}>
             <Routes>
                 <Route path="" element={<Home />} />
                 <Route path="about-us" element={<AboutUs />} />
                 <Route path="delivery" element={<Delivery />} />
                 <Route path="contacts" element={<Contacts />} />
+                <Route path="liked" element={<Liked />} />
                 <Route path="items/:id" element={<MoreInfo />} />
                 <Route path="NotReady" element={<NotReady />} />
             </Routes>
-        </div>
+        </SearchRequest.Provider>
     );
-}
+};
 
 export default App;

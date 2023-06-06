@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Search from './Search';
 
 const Header = () => {
     const [isHidden, setIsHidden] = useState(true);
@@ -7,14 +8,6 @@ const Header = () => {
     const toggleVisibility = () => {
         setIsHidden(!isHidden);
     };
-
-    // const blockStyles = {
-    //     maxHeight: isHidden ? '0' : '1000px', // Максимальная высота блока
-    //     opacity: isHidden ? 0 : 1,
-    //     transition: 'max-height 0.25s ease, opacity 0.25s ease, padding-top 0.5s ease', // Анимация максимальной высоты и прозрачности
-    //     overflow: 'hidden',
-    //     paddingTop: isHidden ? '0' : '40px',
-    // };
 
     const blockStyles = {
         display: isHidden ? 'none' : 'block',
@@ -50,17 +43,16 @@ const Header = () => {
                         <li>Партнерам</li>
                     </Link>
                 </ul>
-                <div className="search">
-                    <input type="text" placeholder="Я хочу купить..." />
-                    <img src="../assets/search.png" alt="search" />
-                </div>
+                <Search />
                 <ul className="icons">
                     <li className="profile">
                         <img src="../assets/profile.png" alt="profile" />
                     </li>
-                    <li className="liked">
-                        <img src="../assets/liked.png" alt="profile" />
-                    </li>
+                    <Link to="/liked">
+                        <li className="liked">
+                            <img src="../assets/liked.png" alt="profile" />
+                        </li>
+                    </Link>
                     <li className="cart">
                         <img src="../assets/cart.png" alt="profile" />
                     </li>
@@ -77,15 +69,19 @@ const Header = () => {
                                 onClick={toggleVisibility}
                             />
                         </li>
-                        <div className="header-3-inside-icons">
-                            <li className="liked">
-                                <img src="../assets/liked.png" alt="profile" />
-                            </li>
+
+                        <div className="header-3-inside-icons" style={{ display: 'none' }}>
+                            <Link to="/liked">
+                                <li className="liked">
+                                    <img src="../assets/liked.png" alt="profile" />
+                                </li>
+                            </Link>
                             <li className="cart">
                                 <img src="../assets/cart.png" alt="profile" />
                             </li>
                         </div>
-                        <li className="header-3-el">Католог</li>
+
+                        <li className="header-3-el">Каталог</li>
                         <li className="header-3-el">Новинки</li>
                         <li className="header-3-el">Бренды</li>
                         <li className="header-3-el">Скидки</li>
@@ -95,7 +91,7 @@ const Header = () => {
 
             <div className="header-4" style={blockStyles}>
                 <ul>
-                    <Link to="/NotReady">
+                    <Link to="/NotReady" onClick={toggleVisibility}>
                         <li>
                             Каталог
                             <svg
@@ -111,7 +107,7 @@ const Header = () => {
                             </svg>
                         </li>
                     </Link>
-                    <Link to="/NotReady">
+                    <Link to="/NotReady" onClick={toggleVisibility}>
                         <li>
                             Новинки
                             <svg
@@ -127,7 +123,7 @@ const Header = () => {
                             </svg>
                         </li>
                     </Link>
-                    <Link to="/NotReady">
+                    <Link to="/NotReady" onClick={toggleVisibility}>
                         <li>
                             Бренды
                             <svg
@@ -143,7 +139,7 @@ const Header = () => {
                             </svg>
                         </li>
                     </Link>
-                    <Link to="/NotReady">
+                    <Link to="/NotReady" onClick={toggleVisibility}>
                         <li>
                             Скидки
                             <svg
@@ -159,7 +155,7 @@ const Header = () => {
                             </svg>
                         </li>
                     </Link>
-                    <Link to="/delivery">
+                    <Link to="/delivery" onClick={toggleVisibility}>
                         <li>
                             Доставка
                             <svg
@@ -175,7 +171,7 @@ const Header = () => {
                             </svg>
                         </li>
                     </Link>
-                    <Link to="/about-us">
+                    <Link to="/about-us" onClick={toggleVisibility}>
                         <li>
                             О нас
                             <svg
@@ -191,7 +187,7 @@ const Header = () => {
                             </svg>
                         </li>
                     </Link>
-                    <Link to="/contacts">
+                    <Link to="/contacts" onClick={toggleVisibility}>
                         <li>
                             Контакты
                             <svg
@@ -207,7 +203,7 @@ const Header = () => {
                             </svg>
                         </li>
                     </Link>
-                    <Link to="/NotReady">
+                    <Link to="/NotReady" onClick={toggleVisibility}>
                         <li>
                             Партнеры
                             <svg
@@ -223,7 +219,7 @@ const Header = () => {
                             </svg>
                         </li>
                     </Link>
-                    <Link to="/NotReady">
+                    <Link to="/NotReady" onClick={toggleVisibility}>
                         <li>
                             Личный кабинет
                             <svg

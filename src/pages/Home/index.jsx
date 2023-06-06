@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
@@ -6,40 +6,56 @@ import Introduction from '../../components/Introduction';
 import Blog from '../../components/Blog';
 import Items from '../../components/Items';
 
+import { SearchRequest } from '../../App';
+
 import styles from '../../scss/styles.scss';
 
 const Home = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const { searchValue } = useContext(SearchRequest);
+    const search = searchValue ? `?search=${searchValue}` : '';
+
     useEffect(() => {
         setLoading(true);
-        fetch('https://646a62a870b2302c85e426d4.mockapi.io/items')
+        fetch(`https://646a62a870b2302c85e426d4.mockapi.io/items${search}`)
             .then((res) => res.json())
             .then((arr) => {
                 setItems(arr);
                 setLoading(false);
             });
         window.scrollTo(0, 0);
-    }, []);
+    }, [searchValue]);
 
     const cosmeticsItems = items.map((obj) => <Items key={obj.id} {...obj} />);
-    console.log(cosmeticsItems);
 
     return (
         <>
             <Header />
-            <Introduction />
-
-            <div className="new-items">
-                <div className="new-sign">
-                    <h2>Новинки</h2>
-                    <div className="stain"></div>
+            {searchValue ? (
+                <div className="new-items">
+                    <h2>Поиск по запросу: {searchValue}</h2>
+                    {cosmeticsItems.length > 0 ? (
+                        <div className="cards">{cosmeticsItems}</div>
+                    ) : (
+                        'К сожалению по вашему запросу ничего не найдено'
+                    )}
                 </div>
-                <div className="cards">{cosmeticsItems}</div>
-            </div>
+            ) : (
+                <>
+                    <Introduction />
+                    <div className="new-items">
+                        <div className="new-sign">
+                            <h2>Новинки</h2>
+                            <div className="stain"></div>
+                        </div>
+                        <div className="cards">{cosmeticsItems}</div>
+                    </div>
 
-            <Blog />
+                    <Blog />
+                </>
+            )}
             <Footer />
         </>
     );
