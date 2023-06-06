@@ -12,11 +12,14 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-
     a {
         color: black;
         text-decoration: none;
     }
+}
+
+#root {
+    overflow-x: hidden;
 }
 
 header {
@@ -479,10 +482,9 @@ footer {
             }
         }
         .cards {
-            // flex-direction: column;
-            overflow-x: scroll;
+            flex-direction: column;
             .card {
-                // margin: 15px auto;
+                margin: 15px auto;
                 margin-right: 15px;
                 width: 75%;
             }
