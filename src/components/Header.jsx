@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Search from './Search';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
     const [isHidden, setIsHidden] = useState(true);
+    const { likedCount, items, likedItems } = useSelector((state) => state.cart);
 
     const toggleVisibility = () => {
         setIsHidden(!isHidden);
     };
+
+    const isMounted = useRef(null);
+
+    useEffect(() => {
+        if (isMounted.current) {
+            const json = JSON.stringify(likedItems);
+            localStorage.setItem('liked', json);
+        }
+        isMounted.current = true;
+    }, [items]);
 
     const blockStyles = {
         display: isHidden ? 'none' : 'block',
@@ -74,6 +86,7 @@ const Header = () => {
                             <Link to="/liked">
                                 <li className="liked">
                                     <img src="../assets/liked.png" alt="profile" />
+                                    <span className="count">{likedCount}</span>
                                 </li>
                             </Link>
                             <li className="cart">

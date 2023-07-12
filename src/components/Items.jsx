@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { useRef } from 'react';
-import { useEffect } from 'react';
 
 const Items = ({ id, title, fullTitle, price, imageUrl, cartUrl }) => {
     const [isLiked, setIsLiked] = useState(false);
-    // const isMounted = useRef(false);
 
     const toggle = () => {
         setIsLiked(!isLiked);
-        const json = JSON.stringify({ id, title, fullTitle, price, imageUrl, cartUrl });
-        localStorage.setItem('liked', json);
     };
 
     return (

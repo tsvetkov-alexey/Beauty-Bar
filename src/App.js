@@ -8,23 +8,21 @@ import Contacts from './pages/Contacts';
 import { createContext, useState } from 'react';
 import Liked from './components/Liked';
 
-export const SearchRequest = createContext('');
+// export const SearchRequest = createContext('');
 
 const App = () => {
-    const [searchValue, setSearchValue] = useState('');
+    // const [searchValue, setSearchValue] = useState('');
 
     return (
-        <SearchRequest.Provider value={{ searchValue, setSearchValue }}>
-            <Routes>
-                <Route path="" element={<Home />} />
-                <Route path="about-us" element={<AboutUs />} />
-                <Route path="delivery" element={<Delivery />} />
-                <Route path="contacts" element={<Contacts />} />
-                <Route path="liked" element={<Liked />} />
-                <Route path="items/:id" element={<MoreInfo />} />
-                <Route path="NotReady" element={<NotReady />} />
-            </Routes>
-        </SearchRequest.Provider>
+        <Routes>
+            <Route path="" element={<Home />} />
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="delivery" element={<Delivery />} />
+            <Route path="contacts" element={<Contacts />} />
+            <Route path="liked" element={<Liked />} />
+            <Route path="items/:id" element={<MoreInfo />} />
+            <Route path="NotReady" element={<NotReady />} />
+        </Routes>
     );
 };
 
